@@ -1,4 +1,6 @@
 import Footer from "@/components/Footer";
+import GradualBlur from "@/components/GradualBlur";
+import GridOverlay from "@/components/GridOverlay";
 import Navbar from "@/components/Navbar";
 import PageTransition from "@/components/PageTransition";
 import Preloader from "@/components/Preloader";
@@ -18,7 +20,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "axylot — Digital Solutions | Engineered for Growth",
-  description: "axylot is a digital solution team providing high-end web, app, and custom system engineering.",
+  description:
+    "axylot is a digital solution team providing high-end web, app, and custom system engineering.",
 };
 
 export default function RootLayout({
@@ -28,24 +31,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${outfit.variable} ${geistMono.variable} antialiased bg-background text-foreground`}>
+      <body
+        className={`${outfit.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        suppressHydrationWarning
+      >
         <Preloader />
-        
-        {/* Global Grid Overlay */}
-        <div className="fixed inset-0 pointer-events-none z-[40] opacity-[0.03]">
-          <div className="grid-container h-full">
-            <div className="grid-layout h-full">
-              {[...Array(13)].map((_, i) => (
-                <div key={i} className="h-full w-px bg-white"></div>
-              ))}
-            </div>
-          </div>
-        </div>
 
+        {/* Grid overlay — client component avoids SSR/client key mismatch */}
+        <GridOverlay />
+
+        {/* Navbar */}
         <Navbar />
-        <PageTransition>
-          {children}
-        </PageTransition>
+
+        {/* Gradual blur at the bottom of the screen */}
+        <GradualBlur
+          direction="bottom"
+          height="120px"
+          blurStrength={16}
+          layers={10}
+          className="fixed bottom-0 z-[55]"
+        />
+
+        <PageTransition>{children}</PageTransition>
+
         <Footer />
       </body>
     </html>

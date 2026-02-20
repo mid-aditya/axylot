@@ -134,7 +134,7 @@ export default function Footer() {
                   src="/axylot.svg" 
                   alt="axylot" 
                   fill 
-                  className="object-contain invert opacity-60 group-hover:opacity-100 transition-opacity"
+                  className="object-contain [filter:brightness(0)_saturate(100%)_invert(86%)_sepia(90%)_saturate(1912%)_hue-rotate(359deg)_brightness(103%)_contrast(107%)] opacity-60 group-hover:opacity-100 transition-opacity"
                 />
               </div>
               <span className="font-bold text-xl tracking-tighter uppercase">axylot</span>
