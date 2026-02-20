@@ -16,10 +16,10 @@ export default function PricingPage() {
         <ComparisonTable />
       </div>
 
-      <div className="py-24 border-t border-border">
-         <div className="grid-container text-center">
-            <h3 className="text-2xl font-bold mb-8">Ready to scale your product?</h3>
-            <button className="bg-brand text-black px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform">
+      <div className="py-16 md:py-24 border-t border-border px-6">
+         <div className="grid-container text-center max-w-xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-bold mb-8 uppercase tracking-tighter">Ready to scale your product?</h3>
+            <button className="w-full sm:w-auto bg-brand text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform text-xs">
                Book a 15-min call
             </button>
          </div>

@@ -13,12 +13,12 @@ export default function AboutPage() {
         subtitle="A compact crew of senior engineers and designers focused on creating technical solutions with surgical precision."
       />
 
-      <section className="py-24 border-y border-border">
+      <section className="py-16 md:py-24 border-y border-border">
          <div className="grid-container">
-            <div className="grid-layout items-start gap-12">
+            <div className="grid-layout items-start gap-8 md:gap-12">
                <div className="col-span-12 lg:col-span-6">
-                  <h2 className="text-4xl font-bold tracking-tighter uppercase mb-12">Our Philosophy</h2>
-                  <div className="space-y-12">
+                  <h2 className="text-3xl md:text-4xl font-bold tracking-tighter uppercase mb-8 md:mb-12">Our Philosophy</h2>
+                  <div className="space-y-8 md:space-y-12">
                      {[
                        { t: "Speed is a Feature", d: "Performance isn't an afterthought. We optimize every millisecond for maximum responsiveness." },
                        { t: "Zero Friction", d: "Direct Slack access. Weekly sprints. No account managers standing between you and the engineers." },
@@ -35,10 +35,10 @@ export default function AboutPage() {
                   <motion.div 
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="w-64 h-64 border-2 border-brand/20 rounded-full flex items-center justify-center p-8 group-hover:border-brand/60 transition-colors"
+                    className="w-40 h-40 md:w-64 md:h-64 border-2 border-brand/20 rounded-full flex items-center justify-center p-6 md:p-8 group-hover:border-brand/60 transition-colors"
                   >
-                     <div className="w-full h-full border-2 border-brand/40 rounded-full flex items-center justify-center p-8">
-                         <span className="font-mono text-xs font-bold text-center tracking-tighter uppercase opacity-40 group-hover:opacity-100 transition-opacity">Axylot <br/> Core</span>
+                     <div className="w-full h-full border-2 border-brand/40 rounded-full flex items-center justify-center p-6 md:p-8">
+                         <span className="font-mono text-[10px] md:text-xs font-bold text-center tracking-tighter uppercase opacity-40 group-hover:opacity-100 transition-opacity">Axylot <br/> Core</span>
                      </div>
                   </motion.div>
                </div>
@@ -47,11 +47,11 @@ export default function AboutPage() {
       </section>
 
       {/* The Developers Section */}
-      <section className="py-32">
+      <section className="py-20 md:py-32">
         <div className="grid-container">
-          <div className="mb-20">
+          <div className="mb-12 md:mb-20">
             <span className="text-brand font-mono text-[10px] uppercase tracking-[0.4em] block mb-4">// The Collective</span>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase">The <span className="italic text-brand/40">Entities</span> behind<br/>the machine.</h2>
+            <h2 className="text-4xl md:text-7xl font-bold tracking-tighter uppercase leading-[1.1] md:leading-[1.1]">The <span className="italic text-brand/40">Entities</span> behind<br className="hidden md:block"/>the machine.</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -63,7 +63,7 @@ export default function AboutPage() {
               <motion.div 
                 key={dev.id}
                 whileHover={{ y: -10 }}
-                className="group relative bg-white/[0.02] border border-white/5 p-10 rounded-2xl hover:bg-white/[0.05] hover:border-brand/20 transition-all duration-500"
+                className="group relative bg-white/[0.02] border border-white/5 p-6 md:p-10 rounded-2xl hover:bg-white/[0.05] hover:border-brand/20 transition-all duration-500"
               >
                 {/* Developer Visual */}
                 <div className="relative w-full aspect-square mb-10 bg-black/40 rounded-xl flex items-center justify-center overflow-hidden">
@@ -112,10 +112,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="py-24">
-         <div className="grid-container text-center max-w-2xl">
-            <h3 className="text-3xl font-bold mb-12 uppercase tracking-tighter italic">We don&apos;t build projects. We engineer partnerships.</h3>
-            <p className="opacity-40 font-light">Join the 40+ brands that have scaled their digital footprint with Axylot.</p>
+      <div className="py-16 md:py-24">
+         <div className="grid-container text-center max-w-2xl px-6">
+            <h3 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 uppercase tracking-tighter italic">We don&apos;t build projects. We engineer partnerships.</h3>
+            <p className="opacity-40 font-light text-sm md:text-base">Join the 40+ brands that have scaled their digital footprint with Axylot.</p>
          </div>
       </div>
     </div>

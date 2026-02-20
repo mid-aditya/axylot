@@ -6,9 +6,9 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-24 md:py-48 bg-background">
       <div className="grid-container">
-        <div className="text-center mb-24">
-          <span className="font-mono text-xs uppercase tracking-widest opacity-40">// Transparent pricing</span>
-          <h2 className="text-4xl md:text-7xl font-bold mt-4 tracking-tighter">Simple tiers. No surprises.</h2>
+        <div className="text-center mb-16 md:mb-24 px-4">
+          <span className="font-mono text-[10px] md:text-xs uppercase tracking-widest opacity-40">// Transparent pricing</span>
+          <h2 className="text-4xl md:text-7xl font-bold mt-4 tracking-tighter uppercase leading-[1.1]">Simple tiers. <br className="xs:hidden"/>No surprises.</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -19,8 +19,8 @@ export default function Pricing() {
               <p className="mt-6 text-sm opacity-60 leading-relaxed">Perfect for ongoing development and consistent iterations.</p>
             </div>
             
-            <div className="mb-10 md:mb-12">
-              <span className="text-4xl md:text-5xl font-bold tracking-tighter">$8,500</span>
+            <div className="mb-8 md:mb-12">
+              <span className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">$8,500</span>
               <span className="text-sm opacity-40 font-mono"> / month</span>
             </div>
 
@@ -51,8 +51,8 @@ export default function Pricing() {
               <p className="mt-6 text-sm opacity-80 leading-relaxed">Your own elastic engineering team. Fast and high bandwidth.</p>
             </div>
             
-            <div className="mb-10 md:mb-12">
-              <span className="text-4xl md:text-5xl font-bold tracking-tighter">$15,000</span>
+            <div className="mb-8 md:mb-12">
+              <span className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">$15,000</span>
               <span className="text-sm opacity-60 font-mono"> / month</span>
             </div>
 

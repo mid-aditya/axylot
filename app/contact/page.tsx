@@ -12,34 +12,34 @@ export default function ContactPage() {
         subtitle="Available for select technical partnerships and complex digital transformations. Inquire below."
       />
 
-      <section className="py-24 border-t border-border">
+      <section className="py-16 md:py-24 border-t border-border">
          <div className="grid-container">
-            <div className="grid-layout gap-12">
-               <div className="col-span-12 lg:col-span-12">
+            <div className="grid-layout gap-8 md:gap-12">
+               <div className="col-span-12">
                   <div className="p-px bg-gradient-to-br from-brand/40 to-transparent rounded-3xl">
-                     <div className="bg-background rounded-[23px] p-8 md:p-16">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                     <div className="bg-background rounded-[23px] p-6 sm:p-10 md:p-16">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                            <div>
-                              <h3 className="text-3xl font-bold mb-12 uppercase tracking-tighter italic">Connect</h3>
-                              <ul className="space-y-12">
+                               <h3 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 uppercase tracking-tighter italic text-brand/80">Connect</h3>
+                              <ul className="space-y-8 md:space-y-12">
                                  {[
                                    { label: "General Inquiry", value: "hello@axylot.com", icon: <Mail size={20} /> },
                                    { label: "Book a Project", value: "Schedule Call", icon: <ArrowUpRight size={20} /> },
                                    { label: "Location", value: "Working Globally", icon: <MapPin size={20} /> }
                                  ].map((item, i) => (
-                                   <li key={i} className="flex flex-col gap-4">
+                                   <li key={i} className="flex flex-col gap-3">
                                       <div className="flex items-center gap-3 opacity-20">
                                          {item.icon}
-                                         <span className="font-mono text-[10px] uppercase tracking-widest">{item.label}</span>
+                                         <span className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest">{item.label}</span>
                                       </div>
-                                      <span className="text-2xl font-bold hover:text-brand transition-colors cursor-pointer">{item.value}</span>
+                                      <span className="text-xl md:text-2xl font-bold hover:text-brand transition-colors cursor-pointer break-all">{item.value}</span>
                                    </li>
                                  ))}
                               </ul>
                            </div>
 
-                           <div className="space-y-8">
-                              <h3 className="text-3xl font-bold mb-12 uppercase tracking-tighter italic">Quick Message</h3>
+                           <div className="space-y-6 md:space-y-8">
+                              <h3 className="text-2xl md:text-3xl font-bold mb-8 md:mb-12 uppercase tracking-tighter italic text-brand/80">Quick Message</h3>
                               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                                  <div className="space-y-2">
                                     <label className="font-mono text-[10px] uppercase tracking-widest opacity-20">Your Name</label>
