@@ -10,6 +10,8 @@
   --color-card: #141414;
   --color-border: #222222;
 
+  --breakpoint-xs: 480px;
+
   --ease-power3-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
@@ -20,7 +22,13 @@
     --foreground: #ffffff;
     --card: #141414;
     --border: #222222;
-    --site-grid-margin: 2rem;
+    --site-grid-margin: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --site-grid-margin: 2.5rem;
+    }
   }
 
   body {

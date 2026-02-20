@@ -43,7 +43,7 @@ export default function Hero() {
              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.4em] text-brand">Digital Engineering Studio</span>
           </motion.div>
 
-          <h1 className="flex flex-col text-[12vw] sm:text-[10vw] leading-[0.85] font-bold tracking-[-0.04em] uppercase">
+          <h1 className="flex flex-col text-[14vw] sm:text-[10vw] leading-[0.85] font-bold tracking-[-0.04em] uppercase">
             <div className="overflow-hidden">
               <motion.span variants={itemVars} className="block">Websites</motion.span>
             </div>
@@ -56,21 +56,21 @@ export default function Hero() {
             </div>
           </h1>
 
-          <div className="grid grid-cols-12 gap-6 mt-8 sm:mt-16 items-start">
+          <div className="grid grid-cols-12 gap-y-12 md:gap-6 mt-12 md:mt-16 items-start">
             <motion.div variants={itemVars} className="col-span-12 lg:col-span-6">
-              <p className="text-xl md:text-2xl leading-[1.4] opacity-50 font-light max-w-xl">
+              <p className="text-lg md:text-2xl leading-[1.4] opacity-50 font-light max-w-xl">
                 axylot is an elite engineering team dedicated to crafting digital products that push boundaries. Focused on speed, built for scale, and designed for conversion.
               </p>
             </motion.div>
             
-            <motion.div variants={itemVars} className="col-span-12 lg:col-span-5 lg:col-start-8 flex flex-col gap-8">
+            <motion.div variants={itemVars} className="col-span-12 lg:col-span-5 lg:col-start-8 flex flex-col gap-10 md:gap-8">
               <div className="flex flex-col gap-2">
                 <span className="text-[10px] uppercase tracking-[0.3em] font-bold opacity-30">Current Focus / 01</span>
-                <span className="text-3xl md:text-4xl font-bold uppercase">Scalable Core Systems</span>
+                <span className="text-2xl md:text-4xl font-bold uppercase">Scalable Core Systems</span>
               </div>
               <div className="flex flex-col gap-2">
                 <span className="text-[10px] uppercase tracking-[0.3em] font-bold opacity-30">Current Focus / 02</span>
-                <span className="text-3xl md:text-4xl font-bold uppercase">Dynamic Web Experiences</span>
+                <span className="text-2xl md:text-4xl font-bold uppercase">Dynamic Web Experiences</span>
               </div>
             </motion.div>
           </div>
@@ -78,7 +78,7 @@ export default function Hero() {
       </div>
 
       {/* Stats Strip */}
-      <div className="grid-container w-full mt-24">
+      <div className="grid-container w-full mt-24 md:mt-32">
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -92,8 +92,8 @@ export default function Hero() {
             { label: "Senior Engineer", value: "100%" }
           ].map((stat, i) => (
             <div key={i} className="flex flex-col gap-1 py-8 md:py-12 border-r border-white/10 last:border-r-0 pl-1 md:pl-0">
-               <span className="text-2xl sm:text-3xl font-bold uppercase tracking-tighter">{stat.value}</span>
-               <span className="text-[9px] uppercase tracking-widest opacity-30">{stat.label}</span>
+               <span className="text-xl sm:text-3xl font-bold uppercase tracking-tighter">{stat.value}</span>
+               <span className="text-[9px] uppercase tracking-widest opacity-30 leading-tight">{stat.label}</span>
             </div>
           ))}
         </motion.div>

@@ -19,37 +19,38 @@ const projects = [
 
 export default function FeaturedWork() {
   return (
-    <section id="work" className="py-24 md:py-48 bg-zinc-950 text-white">
+    <section id="work" className="py-24 md:py-48 bg-background text-white">
       <div className="grid-container">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-24 gap-8">
           <div className="max-w-xl">
-            <span className="font-mono text-xs uppercase tracking-widest opacity-40">// Featured work</span>
-            <h2 className="text-4xl md:text-6xl font-bold mt-4 tracking-tighter">Crafting digital<br/>masterpieces.</h2>
+            <span className="font-mono text-[10px] uppercase tracking-[0.3em] opacity-40 text-brand">// Featured work</span>
+            <h2 className="text-4xl md:text-7xl font-bold mt-6 tracking-tighter leading-[0.9] uppercase">Crafting digital<br/>masterpieces.</h2>
           </div>
-          <p className="max-w-xs text-sm opacity-60 leading-relaxed italic">
+          <p className="max-w-xs text-sm opacity-40 leading-relaxed font-light italic">
             &quot;The details most teams skip are the details we care about most.&quot;
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
           {projects.map((project, index) => (
             <motion.div 
               key={index}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -15 }}
+              transition={{ duration: 0.5, ease: [0.33, 1, 0.68, 1] }}
               className="group cursor-pointer"
             >
-              <div className="aspect-[4/3] relative overflow-hidden rounded-lg bg-zinc-900 border border-zinc-800">
-                <div className="absolute inset-0 flex items-center justify-center opacity-20 group-hover:opacity-40 transition-opacity">
-                   {/* Abstract SVG or Pattern */}
-                   <div style={{ background: project.color, filter: 'blur(100px)' }} className="w-64 h-64 rounded-full" />
+              <div className="aspect-[4/3] relative overflow-hidden rounded-sm bg-card border border-white/5">
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                   {/* Abstract Glow */}
+                   <div style={{ background: project.color, filter: 'blur(120px)' }} className="w-48 h-48 md:w-64 md:h-64 rounded-full opacity-10 group-hover:opacity-30 transition-opacity duration-700" />
                 </div>
-                <div className="absolute inset-x-8 bottom-8 flex justify-between items-end z-10">
+                <div className="absolute inset-x-6 bottom-6 md:inset-x-10 md:bottom-10 flex justify-between items-end z-10">
                   <div>
-                    <span className="font-mono text-[10px] uppercase tracking-widest block mb-2 opacity-60">{project.category}</span>
-                    <h3 className="text-3xl font-bold tracking-tight">{project.name}</h3>
+                    <span className="font-mono text-[9px] uppercase tracking-[0.2em] block mb-2 opacity-30">{project.category}</span>
+                    <h3 className="text-2xl md:text-4xl font-bold tracking-tight uppercase leading-none">{project.name}</h3>
                   </div>
-                  <div className="h-10 w-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all">
-                    →
+                  <div className="h-10 w-10 md:h-12 md:w-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-brand group-hover:text-black group-hover:border-brand transition-all duration-300">
+                    <span className="text-xl">→</span>
                   </div>
                 </div>
               </div>

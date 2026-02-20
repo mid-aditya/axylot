@@ -23,14 +23,14 @@ export default function Services() {
             <motion.div 
               key={index} 
               whileHover={{ backgroundColor: "rgba(255,255,255,0.02)" }}
-              className="bg-background p-10 flex flex-col min-h-[300px]"
+              className="bg-background p-8 md:p-10 flex flex-col min-h-[250px] md:min-h-[300px]"
             >
-              <span className="font-mono text-sm opacity-20 mb-auto">0{index + 1}</span>
-              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-              <p className="opacity-40 text-sm leading-relaxed mb-8">{service.desc}</p>
+              <span className="font-mono text-sm opacity-20 mb-8 md:mb-auto">0{index + 1}</span>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 uppercase tracking-tight">{service.title}</h3>
+              <p className="opacity-40 text-sm leading-relaxed mb-10 md:mb-8 font-light">{service.desc}</p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {service.tags.map(tag => (
-                  <span key={tag} className="text-[10px] font-mono border border-border px-2 py-0.5 rounded-full opacity-40 uppercase tracking-widest text-brand">
+                  <span key={tag} className="text-[9px] font-mono border border-border px-2 py-0.5 rounded-full opacity-40 uppercase tracking-widest text-brand">
                     {tag}
                   </span>
                 ))}
