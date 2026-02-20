@@ -91,16 +91,6 @@ export default function Preloader() {
             </div>
           </div>
           
-          {/* Subtle technical background grid */}
-          <div className="absolute inset-0 pointer-events-none opacity-[0.03] -z-10">
-             <div className="grid-container h-full">
-                <div className="grid-layout h-full">
-                   {[...Array(6)].map((_, i) => (
-                     <div key={i} className="h-full w-px bg-white"></div>
-                   ))}
-                </div>
-             </div>
-          </div>
         </motion.div>
       )}
     </AnimatePresence>

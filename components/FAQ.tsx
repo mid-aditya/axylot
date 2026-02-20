@@ -26,7 +26,7 @@ export default function FAQ() {
     <section className="py-24 md:py-48 bg-background border-t border-border">
       <div className="grid-container">
         <div className="grid-layout">
-          <div className="col-span-12 lg:col-span-4 sticky top-32 h-fit mb-16 lg:mb-0">
+          <div className="col-span-12 lg:col-span-4 lg:sticky lg:top-32 h-fit mb-12 lg:mb-0">
             <span className="premium-pill">// FAQ</span>
             <h2 className="text-4xl font-bold mt-8 tracking-tighter uppercase">Common questions.</h2>
           </div>
