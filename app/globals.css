@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: "Outfit", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+
+  --color-brand: #FAFF00;
+  --color-background: #0a0a0a;
+  --color-foreground: #ffffff;
+  --color-card: #141414;
+  --color-border: #222222;
+
+  --ease-power3-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
+    --brand: #FAFF00;
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #ffffff;
+    --card: #141414;
+    --border: #222222;
+    --site-grid-margin: 2rem;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-mono);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .grid-container {
+    padding-left: var(--site-grid-margin);
+    padding-right: var(--site-grid-margin);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+  }
+
+  .grid-layout {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
+
+  /* Emulate the grid overlay Good Fella uses */
+  .grid-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.05;
+  }
+
+  .grid-overlay-line {
+    height: 100%;
+    width: 1px;
+    background: white;
+  }
+
+  /* Typography shortcuts */
+  .h1-meta {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+  }
+
+  .premium-pill {
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background: var(--card);
+  }
+}
+
+/* Custom Scrollbar to match minimalist vibe */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+
+/* GSAP/Framer style classes */
+.reveal-wrapper {
+  overflow: hidden;
+}
+
+.reveal-inner {
+  display: block;
 }

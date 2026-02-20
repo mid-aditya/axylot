@@ -1,0 +1,82 @@
+"use client";
+
+import { Check } from "lucide-react";
+
+export default function Pricing() {
+  return (
+    <section id="pricing" className="py-24 md:py-48 bg-background">
+      <div className="grid-container">
+        <div className="text-center mb-24">
+          <span className="font-mono text-xs uppercase tracking-widest opacity-40">// Transparent pricing</span>
+          <h2 className="text-4xl md:text-7xl font-bold mt-4 tracking-tighter">Simple tiers. No surprises.</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Active Tier */}
+          <div className="p-12 rounded-2xl border border-border bg-card flex flex-col hover:border-accent transition-colors">
+            <div className="mb-12">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest bg-foreground text-background px-3 py-1 rounded-full">Active</span>
+              <p className="mt-6 text-sm opacity-60">Perfect for ongoing development and consistent iterations.</p>
+            </div>
+            
+            <div className="mb-12">
+              <span className="text-5xl font-bold tracking-tighter">$8,500</span>
+              <span className="text-sm opacity-40 font-mono"> / month</span>
+            </div>
+
+            <ul className="flex-1 flex flex-col gap-6 mb-12">
+              {[
+                "One request at a time",
+                "2-5 day turnaround",
+                "Unlimited revisions",
+                "Direct Slack access",
+                "Cancel anytime"
+              ].map((feature) => (
+                <li key={feature} className="flex items-center gap-4 text-sm">
+                  <Check size={16} className="text-accent" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <button className="w-full py-4 rounded-full bg-foreground text-background font-bold hover:scale-105 transition-transform">
+              Send your first request
+            </button>
+          </div>
+
+          {/* Embedded Tier */}
+          <div className="p-12 rounded-2xl border border-border bg-foreground text-background flex flex-col hover:shadow-[0_0_50px_rgba(255,117,160,0.2)] transition-all">
+            <div className="mb-12">
+              <span className="text-xs font-mono font-bold uppercase tracking-widest bg-accent text-white px-3 py-1 rounded-full">Embedded</span>
+              <p className="mt-6 text-sm opacity-60">Your own elastic engineering team. Fast and high bandwidth.</p>
+            </div>
+            
+            <div className="mb-12">
+              <span className="text-5xl font-bold tracking-tighter">$15,000</span>
+              <span className="text-sm opacity-40 font-mono text-background/60"> / month</span>
+            </div>
+
+            <ul className="flex-1 flex flex-col gap-6 mb-12">
+              {[
+                "Two requests at a time",
+                "Priority 1-3 day turnaround",
+                "Everything in Active",
+                "Weekly strategy calls",
+                "Full-stack team access"
+              ].map((feature) => (
+                <li key={feature} className="flex items-center gap-4 text-sm">
+                  <Check size={16} className="text-accent" />
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <button className="w-full py-4 rounded-full bg-accent text-white font-bold hover:scale-105 transition-transform border border-accent">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
